@@ -1,0 +1,20 @@
+# Configuration for Cog ⚙️
+# Reference: https://github.com/replicate/cog/blob/main/docs/yaml.md
+build:
+  gpu: true
+  system_packages:
+    - "libgl1-mesa-glx"
+    - "libglib2.0-0"
+  python_version: "3.10"
+  python_packages:
+    - "torch==2.0.1"
+    - "torchvision"
+    - "diffusers"
+    - "opencv-python"
+    - "ffmpeg-python"
+    - "moviepy"
+    - "controlnet_aux"
+    - "mediapipe"
+
+# predict.py defines how predictions are run on your model
+predict: "predict.py:Predictor"
